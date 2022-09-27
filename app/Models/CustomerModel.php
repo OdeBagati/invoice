@@ -44,4 +44,10 @@ class CustomerModel extends Model
             return $this->db->insertID();
         }
     }
+
+    function deleteData($param)
+    {
+        $this->builder->where($param);
+        return $this->builder->delete();
+    }
 }

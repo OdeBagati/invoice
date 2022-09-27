@@ -6,9 +6,7 @@ class Customer extends BaseController
 {
     public function index()
     {
-        $dataJenis=$this->objJenis->getAllData();
-
-        dd($dataJenis);
+        return view('main');
     }
 
     function form($idcustomer=false)
@@ -64,5 +62,14 @@ class Customer extends BaseController
 
             return view('main',$data);
         }
+    }
+
+    function delete($idcustomer)
+    {
+        $paramId		=array('idcustomer'=>$idcustomer);
+        $this->objRoute->deleteData($paramId);
+
+        $this->session->setFlashdata('message','Data berhasil dihapus');
+        return redirect()->back();
     }
 }
