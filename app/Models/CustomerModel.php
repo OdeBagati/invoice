@@ -9,6 +9,8 @@ class CustomerModel extends Model
     protected $builder;
     protected $db;
 
+    private $customer = array();
+
     function __construct()
     {
     	$this->db      = \Config\Database::connect();
@@ -49,5 +51,21 @@ class CustomerModel extends Model
     {
         $this->builder->where($param);
         return $this->builder->delete();
+    }
+
+    function getCustomerOption()
+    {
+        $dataCustomer = $this->builder->get();
+
+        foreach($dataCustomer->getResult() as $listCustomer)
+        {
+            $this->jenis[]=array(
+                'idcustomer'=>$listCustomer->idcustomer,
+                'nama_customer'=>$listCustomer->nama_customer,
+                'no_akun'=>$listCustomer->no_akun
+            );
+        }
+
+        return $this->jenis;
     }
 }

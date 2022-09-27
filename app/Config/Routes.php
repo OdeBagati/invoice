@@ -39,6 +39,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/customer-data', 'Customer::index');
 $routes->get('/customer-form', 'Customer::form');
 $routes->get('/customer-form/(:num)', 'Customer::form/$1');
+$routes->get('/delete-customer/(:num)','Customer::form/$1');
 
 $routes->post('/customer-form', 'Customer::form');
 

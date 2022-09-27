@@ -1,5 +1,5 @@
 <div class="cover-form align-items-center d-flex justify-content-center">
-    <h1>Jagadlab Invoice</h1>
+    <h1>Customer Form</h1>
 </div>
 
 <div class="container mt-4">
@@ -19,12 +19,12 @@
             <input type="text" class="form-control" name="idcustomer" placeholder="idcustomer" value="<?= isset($idcustomer)?$idcustomer:set_value('idcustomer'); ?>">
         </div>
 
-        <div class="card">
+        <div class="card my-5">
             <div class="card-body row">
 
                 <div class="col-5 offset-lg-1 offset-sm-0 mt-3">
                     <select name="idjenis" class="form-select" aria-label=".form-select-lg" required>
-                        <option selected disabled>Open this select menu</option>
+                        <option selected disabled>Jenis Customer</option>
                         <?php
                             use App\Models\JenisModel;
                             $this->objJenis=new JenisModel;
