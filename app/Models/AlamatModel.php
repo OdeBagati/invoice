@@ -4,7 +4,7 @@ use CodeIgniter\Model;
 
 class AlamatModel extends Model
 {
-	protected $table      = 'tb_alamat_customer';
+	protected $table      = 'tb_alamat_site';
     protected $primaryKey = 'idalamat';
     protected $builder;
     protected $db;
@@ -12,13 +12,13 @@ class AlamatModel extends Model
     function __construct()
     {
     	$this->db      = \Config\Database::connect();
-		$this->builder = $this->db->table('tb_alamat_customer');
+		$this->builder = $this->db->table('tb_alamat_site');
     }
 
     function getAllData()
     {
         $this->builder->select('*');
-        $this->builder->join('tb_customer','tb_customer.idcustomer=tb_alamat.idcustomer');
+        $this->builder->join('tb_customer','tb_customer.idcustomer=tb_alamat_site.idcustomer');
         
         return $this->builder->get();
     }
@@ -26,7 +26,7 @@ class AlamatModel extends Model
     function getDataBy($param)
     {
         $this->builder->select('*');
-        $this->builder->join('tb_customer','tb_customer.idcustomer=tb_alamat.idcustomer');
+        $this->builder->join('tb_customer','tb_customer.idcustomer=tb_alamat_site.idcustomer');
         $this->builder->where($param);
 
         return $this->builder->get();

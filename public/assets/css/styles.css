@@ -127,6 +127,20 @@ input[type=checkbox]{
     transform: scale(1.5);
 }
 
+/* Form */
+.cover-form{
+    height: 20vh;
+    background-position: left center;
+    background-color: var(--blue);
+    background-size: cover;
+    background-repeat:no-repeat;
+    margin-bottom: 0rem;
+}
+.cover-form h1{
+    text-transform: uppercase;
+    color: var(--white);
+}
+
 /* APPLYING MEDIA QUERIES */
 @media (max-width: 768px){
     .navbar{

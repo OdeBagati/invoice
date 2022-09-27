@@ -20,7 +20,7 @@
                 <li class="database">
                     <a href="#">Database</a>
                     <ul class="dropdown">
-                        <li><a href="#">New Account Customer</a></li>
+                        <li><a href="<?= route_to('customer-form'); ?>">New Account Customer</a></li>
                         <li><a href="#">Account List</a></li>
                         <li><a href="#">Tax Rate</a></li>
                         <li><a href="#">Sign Rate</a></li>

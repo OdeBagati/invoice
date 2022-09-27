@@ -9,6 +9,9 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
+use App\Models\JenisModel;
+use App\Models\CustomerModel;
+
 /**
  * Class BaseController
  *
@@ -48,5 +51,15 @@ abstract class BaseController extends Controller
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
+
+        $this->render 			= \Config\Services::renderer();
+		$this->validation 		= \Config\Services::validation();
+        $this->session          = \Config\Services::session();
+        $this->request          = \Config\Services::request();
+
+        $this->objJenis         = new JenisModel;
+        $this->objCustomer      = new CustomerModel;
+
+        helper(['url','form']);
     }
 }

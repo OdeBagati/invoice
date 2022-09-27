@@ -17,9 +17,7 @@ class CustomerModel extends Model
 
     function getAllData()
     {
-        $this->builder->select('*');
         $this->builder->join('tb_jenis_customer','tb_jenis_customer.id=tb_customer.idjenis');
-        
         return $this->builder->get();
     }
 
@@ -30,5 +28,20 @@ class CustomerModel extends Model
         $this->builder->where($param);
 
         return $this->builder->get();
+    }
+
+    function saveData($arrSave)
+    {
+        if($arrSave['idcustomer']>0)
+        {
+            $this->builder->where('idcustomer',$arrSave['idcustomer']);
+            $this->builder->update($arrSave);
+            return $arrSave['idcustomer'];
+        }
+        else
+        {
+            $this->builder->insert($arrSave);
+            return $this->db->insertID();
+        }
     }
 }
