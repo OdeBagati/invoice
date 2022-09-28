@@ -41,6 +41,8 @@ $routes->get('/customer-form', 'Customer::form');
 $routes->get('/customer-form/(:num)', 'Customer::form/$1');
 $routes->get('/delete-customer/(:num)','Customer::form/$1');
 $routes->get('/po-form', 'Po::form');
+$routes->get('/customer-form/(:num)', 'Customer::form/$1');
+$routes->get('/delete-customer/(:num)','Customer::form/$1');
 
 $routes->post('/customer-form', 'Customer::form');
 $routes->post('/po-form', 'Po::form');
