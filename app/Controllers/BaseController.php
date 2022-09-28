@@ -11,6 +11,7 @@ use Psr\Log\LoggerInterface;
 
 use App\Models\JenisModel;
 use App\Models\CustomerModel;
+use App\Models\PoModel;
 
 /**
  * Class BaseController
@@ -59,6 +60,7 @@ abstract class BaseController extends Controller
 
         $this->objJenis         = new JenisModel;
         $this->objCustomer      = new CustomerModel;
+        $this->objPo      = new PoModel;
 
         helper(['url','form']);
     }

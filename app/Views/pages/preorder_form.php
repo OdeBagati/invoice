@@ -23,12 +23,12 @@
             <div class="card-body row">
 
                 <div class="col-5 offset-lg-1 offset-sm-0 mt-3">
-                    <select name="idjenis" class="form-select" aria-label=".form-select-lg" required>
-                        <option selected disabled>List Pelanggans</option>
+                    <select name="idcustomer" class="form-select" aria-label=".form-select-lg" required>
+                        <option selected disabled>List Pelanggan</option>
                         <?php
                             use App\Models\CustomerModel;
                             $this->objJenis=new CustomerModel;
-                            $dataCustomer=$this->objJenis->getJenisCustomer();
+                            $dataCustomer=$this->objJenis->getCustomerOption();
 
                             foreach ($dataCustomer as $itemCustomer => $listCustomer)
                             {
@@ -45,15 +45,15 @@
                     </select>
                 </div>
 
-                <div class="col-10 offset-lg-1 offset-sm-0 mt-4">
-                    <input type="text" class="form-control" name="cp" placeholder="Panggilan" value="" required readonly>
+                <div class="col-5 mt-3">
+                    <input type="text" class="form-control" name="cp" placeholder="Panggilan" value="" required>
                 </div>
 
-                <div class="col-10 offset-lg-1 offset-sm-0 mt-4">
+                <div class="col-4 offset-lg-1 offset-sm-0 mt-4">
                     <input type="text" class="form-control" name="po_ref" placeholder="PO Ref" value="" required>
                 </div>
 
-                <div class="col-7 offset-lg-1 offset-sm-0 mt-4">
+                <div class="col-3 mt-4">
                     <input type="date" class="form-control" name="po_date" value="" required>
                 </div>
 
@@ -61,18 +61,19 @@
                     <input type="text" class="form-control" name="sales_ref" placeholder="Sales Ref" value="" required>
                 </div>
 
-                <div class="col-7 offset-lg-1 offset-sm-0 mt-4">
+                <div class="col-3 offset-lg-1 offset-sm-0 mt-4">
                     <input type="date" class="form-control" name="ref_date" value="" required>
                 </div>
 
-                <div class="col-4 mt-4">
+                <div class="col-3 mt-4">
                     <select name="idcurrency" id="idcurrency" class="form-select" aria-label=".form-select-lg" required>
+                        <option selected disabled>Pilih Currency</option>
                         <option value="1">Rp.</option>
                         <option value="2">U$D</option>
                     </select>
                 </div>
                 
-                <div class="col-4 mt-4">
+                <div class="col-3 mt-4">
                     <input type="text" class="form-control" name="diskon" placeholder="Diskon" value="" required>
                 </div>
                 
