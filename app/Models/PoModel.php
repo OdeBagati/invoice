@@ -2,7 +2,7 @@
 namespace App\Models;
 use CodeIgniter\Model;
 
-class JenisModel extends Model
+class PoModel extends Model
 {
 	protected $table      = 'tb_po';
     protected $primaryKey = 'id_po';
