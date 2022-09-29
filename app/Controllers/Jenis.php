@@ -6,6 +6,7 @@ class Jenis extends BaseController
 {
     public function index()
     {
+        $data['dataJenis'] = $this->objJenis->getAllData();
         $data['page'] = 'jenis';
 
         return view('main', $data);
