@@ -46,6 +46,7 @@ $routes->get('/delete-po/(:num)','Po::form/$1');
 $routes->get('/currency-form', 'Currency::form');
 $routes->get('/currency-form/(:num)', 'Currency::form/$1');
 $routes->get('/delete-currency/(:num)','Currency::form/$1');
+$routes->get('/jenis-customer', 'Jenis::index');
 
 $routes->post('/customer-form', 'Customer::form');
 $routes->post('/po-form', 'Po::form');
