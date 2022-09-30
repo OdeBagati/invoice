@@ -6,7 +6,10 @@ class Customer extends BaseController
 {
     public function index()
     {
-        return view('main');
+        $data['dataCustomer'] = $this->objCustomer->getAllData();
+        $data['page'] = 'customer_data';
+
+        return view('main', $data);
     }
 
     function form($idcustomer=false)

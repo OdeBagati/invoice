@@ -16,19 +16,31 @@
             <input type="checkbox" id="checkbox_toggle" />
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
             <div class="menu">
-                <li><a href="#">Home</a></li>
+                <li><a href="<?= base_url(); ?>">Home</a></li>
                 <li class="database">
                     <a href="#">Database</a>
                     <ul class="dropdown">
                         <li><a href="<?= route_to('customer-form'); ?>">New Account Customer</a></li>
-                        <li><a href="#">Account List</a></li>
+                        <li><a href="<?= route_to('customer-data'); ?>">Account List</a></li>
                         <li><a href="#">Tax Rate</a></li>
                         <li><a href="#">Sign Rate</a></li>
                     </ul>
                 </li>
-                <li><a href="#">PO</a></li>
-                <li><a href="#">Invoice</a></li>
-                <li><a href="#">Rekap</a></li>
+                <li class="database">
+                    <a href="#">PO</a>
+                    <ul class="dropdown">
+                        <li><a href="<?= route_to('po-form'); ?>">New PO</a></li>
+                        <li><a href="<?= route_to('po-data'); ?>">PO List</a></li>
+                    </ul>
+                </li>
+                <li class="database">
+                    <a href="#">Invoice</a>
+                    <ul class="dropdown">
+                        <li><a href="<?= route_to('invoice-form'); ?>">New Invoice</a></li>
+                        <li><a href="<?= route_to('invoice-data'); ?>">Invoice List</a></li>
+                    </ul>
+                </li>
+                <li><a href="<?= route_to('rekap'); ?>">Rekap</a></li>
             </div>
         </ul>
     </nav>

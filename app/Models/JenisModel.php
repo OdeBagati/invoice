@@ -35,12 +35,12 @@ class JenisModel extends Model
 
         foreach($dataJenis->getResult() as $listJenis)
         {
-            $this->customer[]=array(
+            $this->jenis[]=array(
                 'id'=>$listJenis->id,
                 'nama_tipe'=>$listJenis->nama_tipe
             );
         }
 
-        return $this->customer;
+        return $this->jenis;
     }
 }

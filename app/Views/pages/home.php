@@ -12,7 +12,7 @@
             <div class="col-lg-4 col-12 mt-1">
                 <div class="card bg-transparent m-3 p-3 menu-border">
                     <div class="card-body text-center">
-                        <a href="#" class="h4 menu-card text-black">New PO</a>
+                        <a href="<?= route_to('po-form'); ?>" class="h4 menu-card text-black">New PO</a>
                     </div>
                 </div>
             </div>
@@ -20,7 +20,7 @@
             <div class="col-lg-4 col-12 mt-1">
                 <div class="card bg-transparent m-3 p-3 menu-border">
                     <div class="card-body text-center">
-                        <a href="#" class="h4 menu-card text-black">New Invoice</a>
+                        <a href="<?= route_to('invoice-form'); ?>" class="h4 menu-card text-black">New Invoice</a>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
             <div class="col-lg-4 col-12 mt-1">
                 <div class="card bg-transparent m-3 p-3 menu-border">
                     <div class="card-body text-center">
-                        <a href="#" class="h4 menu-card text-black">Print Invoice</a>
+                        <a href="<?= route_to('invoice-data'); ?>" class="h4 menu-card text-black">List Invoice</a>
                     </div>
                 </div>
             </div>

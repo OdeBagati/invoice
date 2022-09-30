@@ -1,5 +1,5 @@
 <div class="cover-form align-items-center d-flex justify-content-center">
-    <h1>Currency Form</h1>
+    <h1>Kategori Customer</h1>
 </div>
 
 <div class="container mt-4">
