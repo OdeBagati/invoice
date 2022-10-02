@@ -14,6 +14,7 @@ use App\Models\CustomerModel;
 use App\Models\PoModel;
 use App\Models\CurrencyModel;
 use App\Models\AlamatModel;
+use App\Models\ListPoModel;
 
 /**
  * Class BaseController
@@ -65,6 +66,7 @@ abstract class BaseController extends Controller
         $this->objPo            = new PoModel;
         $this->objCurrency      = new CurrencyModel;
         $this->objAlamat        = new AlamatModel;
+        $this->objListPo        = new ListPoModel;
 
         helper(['url','form']);
     }

@@ -27,6 +27,20 @@ class Po extends BaseController
 
             $id_po = $this->objPo->saveData($saveData);
 
+            foreach($this->request->getPost('kode_po') as $kode_po)
+            {
+                $saveList = array(
+                    'id_list_po' => '',
+                    'id_po' => $id_po,
+                    'deskripsi_po' => $this->request->getPost('deskripsi_po'),
+                    'unit_po' => $this->request->getPost('unit_po'),
+                    'qty' => $this->request->getPost('qty'),
+                    'harga' => $this->request->getPost('harga'),
+                );
+
+                $id_list_po = $this->objAlamat->saveData($saveLists);
+            }
+
             echo 'sukses';
         }
         else
