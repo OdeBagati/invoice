@@ -13,6 +13,7 @@ use App\Models\JenisModel;
 use App\Models\CustomerModel;
 use App\Models\PoModel;
 use App\Models\CurrencyModel;
+use App\Models\AlamatModel;
 
 /**
  * Class BaseController
@@ -63,6 +64,7 @@ abstract class BaseController extends Controller
         $this->objCustomer      = new CustomerModel;
         $this->objPo            = new PoModel;
         $this->objCurrency      = new CurrencyModel;
+        $this->objAlamat        = new AlamatModel;
 
         helper(['url','form']);
     }

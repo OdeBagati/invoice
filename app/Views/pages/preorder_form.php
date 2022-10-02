@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="col-3 mt-4">
-                    <input type="date" class="form-control" name="po_date" value="" required>
+                    <input type="text" placeholder="PO Date" onfocus="(this.type='date')" class="form-control" name="po_date" value="" required>
                 </div>
 
                 <div class="col-3 mt-4">
@@ -62,10 +62,10 @@
                 </div>
 
                 <div class="col-3 offset-lg-1 offset-sm-0 mt-4">
-                    <input type="date" class="form-control" name="ref_date" value="" required>
+                    <input type="text" placeholder="Ref Date" onfocus="(this.type='date')" class="form-control" name="ref_date" value="" required>
                 </div>
 
-                <div class="col-3 mt-4">
+                <div class="col-4 mt-4">
                     <select name="idcurrency" id="idcurrency" class="form-select" aria-label=".form-select-lg" required>
                         <option selected disabled>Pilih Currency</option>
                         <option value="1">Rp.</option>
@@ -77,11 +77,14 @@
                     <input type="text" class="form-control" name="diskon" placeholder="Diskon" value="" required>
                 </div>
                 
+                <div id="addedPO" class="row"></div>
+                
                 <div class="offset-lg-1">
                     <div class="col-4 mt-4">
-                        <button class="btn btn-info rounded-circle text-white"><b class="h3">+</b></button>
+                        <label id="addPO" class="btn btn-info text-white">Tambah PO</label>
                     </div>
                 </div>
+                
 
                 <div class="col-12 text-center">
                     <input type="submit" name="submit" class="btn btn-primary" value="Save Data">

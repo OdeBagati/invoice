@@ -31,4 +31,19 @@ class AlamatModel extends Model
 
         return $this->builder->get();
     }
+
+    function saveData($arrSave)
+    {
+        if($arrSave['idalamat']>0)
+        {
+            $this->builder->where('idalamat',$arrSave['idalamat']);
+            $this->builder->update($arrSave);
+            return $arrSave['idalamat'];
+        }
+        else
+        {
+            $this->builder->insert($arrSave);
+            return $this->db->insertID();
+        }
+    }
 }

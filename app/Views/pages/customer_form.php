@@ -76,10 +76,12 @@
                 <div class="col-4 mt-4">
                     <input type="text" class="form-control" name="cp" placeholder="Contact Person" value="<?= isset($cp)?$cp:set_value('cp'); ?>" required>
                 </div>
+
+                <div id="addedSite"></div>
                 
                 <div class="offset-lg-1">
                     <div class="col-4 mt-4">
-                        <button class="btn btn-info rounded-circle text-white"><b class="h3">+</b></button>
+                        <label id="addSite" class="btn btn-info text-white">Tambah Alamat</label>
                     </div>
                 </div>
 

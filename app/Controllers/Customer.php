@@ -57,6 +57,17 @@ class Customer extends BaseController
 
             $idcustomer = $this->objCustomer->saveData($addKode);
 
+            foreach($this->request->getPost('alamat_site') as $alamat)
+            {
+                $saveAlamat = array(
+                    'idalamat' => '',
+                    'idcustomer' => $idcustomer,
+                    'alamat_site' => $alamat,
+                );
+
+                $idalamat = $this->objAlamat->saveData($saveAlamat);
+            }
+
             echo 'sukses';
         }
         else
